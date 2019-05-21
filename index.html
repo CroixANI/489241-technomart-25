@@ -10,12 +10,12 @@
   <body>
     <header class="site-header">
       <div class="site-header-top">
-        <p class="site-logo">ТЕХНОМАРТ</p>
-        <div class="search">
+        <a class="site-logo">ТЕХНОМАРТ</a>
+        <form class="search" action="https://echo.htmlacademy.ru" method="GET">
           <img src="img/search.png" alt="Поиск">
           <label for="search">Поиск:</label>
           <input id="search" type="text">
-        </div>
+        </form>
         <div class="shopping">
           <a href="bookmarks.html">
             <img src="img/bookmarks.png" alt="Закладки">
@@ -29,10 +29,10 @@
         </div>
       </div>
       <div>
-        <p>Интернет-магазин
+        <h1>Интернет-магазин
           строительных материалов
-          и инструментов для ремонта</p>
-        <div class="address">
+          и инструментов для ремонта</h1>
+        <div class="contacts">
           <a href="tel:+78125550555">+7 (812) 555-05-55</a>
           <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
         </div>
@@ -57,8 +57,6 @@
     </header>
 
     <main class="container">
-      <h1 class="visually-hidden">Интернет-магазин "Техномарт"</h1>
-
       <section class="categories">
         <h2 class="visually-hidden">Категории</h2>
         <ul>
@@ -191,7 +189,6 @@
           <h2>КОМПАНИЯ «Техномарт»</h2>
           <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта
             и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
-          <br>
           <p>Мы можем доставить ваш товар в самые отдаленные точки России!</p>
           <p>Техномарт работает со многими транспортными компаниями:</p>
           <ul class="transport-companies">
@@ -205,8 +202,12 @@
           <h2>КОНТАКТЫ</h2>
           <p>Вы можете забрать товар сами, <br>
             заехав в наш офис:</p>
-          <img src="img/map.png" alt="Адрес компании ул. Большая Конюшенная 19/8">
-          <button class="button button-red">Заблудились? НапиШИТЕ НАМ!</button>
+          <!--TODO - Integrate real map-->
+          <a href="map.html">
+            <img src="img/map.png" alt="Адрес компании ул. Большая Конюшенная 19/8">
+            Карта
+          </a>
+          <button class="button button-red">Заблудились? Напишите нам!</button>
         </div>
       </section>
     </main>

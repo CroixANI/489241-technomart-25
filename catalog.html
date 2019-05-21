@@ -10,12 +10,12 @@
   <body>
     <header class="site-header">
       <div class="site-header-top">
-        <p class="site-logo">ТЕХНОМАРТ</p>
-        <div class="search">
+        <a class="site-logo" href="/">ТЕХНОМАРТ</a>
+        <form class="search" action="https://echo.htmlacademy.ru" method="GET">
           <img src="img/search.png" alt="Поиск">
           <label for="search">Поиск:</label>
           <input id="search" type="text">
-        </div>
+        </form>
         <div class="shopping">
           <a href="bookmarks.html">
             <img src="img/bookmarks.png" alt="Закладки">
@@ -32,14 +32,16 @@
         <p>Интернет-магазин
           строительных материалов
           и инструментов для ремонта</p>
-        <address class="address">
+        <div class="contacts">
           <a href="tel:+78125550555">+7 (812) 555-05-55</a>
-          <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-        </address>
+          <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+        </div>
         <nav class="account-navigation">
           <div>
-            <img src="img/account.svg" alt="Аккаунт">
-            <p>Равшан Джамшутович</p>
+            <a class="accout-button" href="account.html">
+              <img src="img/account.svg" alt="Аккаунт">
+              Равшан Джамшутович
+            </a>
             <a class="button-logout" href="logout.html" aria-label="Выйти"></a>
           </div>
           <ul>
@@ -76,7 +78,7 @@
             <a href="catalog.html?category=instruments">Инструмент</a>
           </li>
           <li>
-            <a href="catalog.html?type=perforators">Перфораторы</a>
+            <a>Перфораторы</a>
           </li>
         </ul>
       </nav>
@@ -233,7 +235,7 @@
             </li>
           </ul>
         </div>
-        <form class="pagination">
+        <form class="pagination" action="https://echo.htmlacademy.ru" method="GET">
           <a class="button button-pagination button-red" href="catalog.html?start=0">1</a>
           <a class="button button-pagination" href="catalog.html?start=10">2</a>
           <a class="button button-pagination" href="catalog.html?start=19">3</a>
