@@ -10,19 +10,21 @@
   <body>
     <header class="site-header">
       <div class="site-header-top">
-        <a class="site-logo">ТЕХНОМАРТ</a>
+        <a class="site-logo">
+          <img src="img/site-icon.png" alt="ТЕХНОМАРТ">
+        </a>
         <form class="search" action="https://echo.htmlacademy.ru" method="GET">
-          <img src="img/search.png" alt="Поиск">
+          <img src="img/icons/icon-search.svg" alt="Поиск">
           <label for="search">Поиск:</label>
           <input id="search" type="text">
         </form>
         <div class="shopping">
           <a href="bookmarks.html">
-            <img src="img/bookmarks.png" alt="Закладки">
+            <img src="img/icons/icon-bookmark.svg" alt="Закладки">
             Закладки: 0
           </a>
           <a href="cart.html">
-            <img src="img/cart.png" alt="Корзина">
+            <img src="img/icons/cart-icon.svg" alt="Корзина">
             Корзина: 0
           </a>
           <a class="button button-green" href="cart.html">Оформить заказ</a>
@@ -178,10 +180,26 @@
           <li><button class="button service" type="button">Гарантия</button></li>
           <li><button class="button service" type="button">Кредит</button></li>
         </ul>
-        <div class="service-details">
+        <div class="service-details service-delivery">
           <p class="service-title">Доставка</p>
-          <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
-            Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
+          <p>Мы с удовольствием доставим ваш товар прямо <br>к вашему подъезду совершенно бесплатно!</p>
+          <p>Ведь мы неплохо заработаем, <br>поднимая его на ваш этаж!</p>
+          <img src="img/service-delivery.png" alt="Доставка">
+        </div>
+        <div class="service-details service-warranty" hidden>
+          <p class="service-title">Гарантия</p>
+          <p>Если купленный у нас товар поломается или заискрит, <br>
+            а также в случае пожара, спровоцированного его возгаранием,
+            вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.</p>
+          <p>Дом уж восстановите как-нибудь сами.</p>
+          <img src="img/service-warranty.png" alt="Гарантия">
+        </div>
+        <div class="service-details service-credit" hidden>
+          <p class="service-title">Кредит</p>
+          <p>Залезть в долговую яму стало проще!</p>
+          <p>Кредитные консультанты придут вам на помощь.</p>
+          <img src="img/service-credit.png" alt="Кредит">
+          <button class="button-red" type="button">Отправить заявку</button>
         </div>
       </section>
 
@@ -201,7 +219,7 @@
         </div>
         <div class="contacts">
           <h2>КОНТАКТЫ</h2>
-          <p>Вы можете забрать товар сами, <br>
+          <p>Вы можете забрать товар сами,
             заехав в наш офис:</p>
           <!--TODO - Integrate real map-->
           <a href="map.html">
@@ -214,7 +232,9 @@
     </main>
 
     <footer class="site-footer">
-      <a class="site-logo" href="/">ТЕХНОМАРТ</a>
+      <a class="site-logo">
+        <img src="img/site-icon.png" alt="ТЕХНОМАРТ">
+      </a>
       <div class="address">
         <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
         <a href="tel:+78125550555">+7 (812) 555-05-55</a>
