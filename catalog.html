@@ -103,9 +103,9 @@
 							<span class="slider-handle right-handle"></span>
 						</div>
             <div class="range-prices">
-              <input value="0" aria-label="Минимальная цена">
+              <input name="minPrice" value="0" aria-label="Минимальная цена">
               <span>-</span>
-              <input value="30000" aria-label="Максимальная цена">
+              <input name="maxPrice" value="30000" aria-label="Максимальная цена">
             </div>
           </div>
           <div class="manufacturers">
@@ -113,31 +113,31 @@
             <ul>
               <li>
                 <label>
-                  <input id="bosch" type="checkbox" checked>
+                  <input name="manufacturers" value="bosch" type="checkbox" checked>
                   BOSCH
                 </label>
               </li>
               <li>
                 <label>
-                  <input id="interscol" type="checkbox">
+                  <input name="manufacturers" value="interscol" type="checkbox">
                   Интерскол
                 </label>
               </li>
               <li>
                 <label>
-                  <input id="makita" type="checkbox" checked>
+                  <input name="manufacturers" value="makita" type="checkbox" checked>
                   Makita
                 </label>
               </li>
               <li>
                 <label>
-                  <input id="dewalt" type="checkbox">
+                  <input name="manufacturers" value="dewalt" type="checkbox">
                   Dewalt
                 </label>
               </li>
               <li>
                 <label>
-                  <input id="hitachi" type="checkbox">
+                  <input name="manufacturers" value="hitachi" type="checkbox">
                   Hitachi
                 </label>
               </li>
@@ -148,13 +148,13 @@
             <ul>
               <li>
                 <label>
-                  <input id="accumulator" name="power" type="radio">
+                  <input name="power" value="accumulator" type="radio" checked>
                   Аккумуляторные
                 </label>
               </li>
               <li>
                 <label>
-                  <input id="electric" name="power" type="radio">
+                  <input name="power" value="electric" type="radio">
                   Сетевые
                 </label>
               </li>
@@ -261,7 +261,7 @@
 
     <footer class="site-footer">
       <a class="site-logo" href="index.html">
-        <img src="img/site-icon.png" alt="ТЕХНОМАРТ" height="68px" width="220px">
+        <img src="img/site-icon-footer.png" alt="ТЕХНОМАРТ" height="68px" width="220px">
       </a>
       <div class="address">
         <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
