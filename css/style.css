@@ -182,14 +182,6 @@ address {
   text-transform: none;
 }
 
-.items .button-price {
-  font-size: 17px;
-  line-height: 18px;
-  color: #ffffff;
-
-  background-color: #ee3643;
-}
-
 .popular .section-header h2,
 .services h2,
 .about h2 {
@@ -224,6 +216,8 @@ address {
 }
 
 .services-list .service {
+  width: 240px;
+
   color: #ffffff;
 
   background-color: #32425c
@@ -296,4 +290,103 @@ address {
   font-size: 18px;
   line-height: 20px;
   text-transform: none;
+}
+
+.button {
+  display: inline-block;
+  width: 135px;
+  padding: 10px 0;
+  border: 0;
+
+  font-size: 17px;
+  line-height: 18px;
+  text-align: center;
+  color: #ffffff;
+
+  background-color: #ee3643;
+
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus,
+a.button:hover,
+a.button:focus {
+  background-color: #ca2c37;
+}
+
+.button:active {
+  background-color: #ba2732;
+}
+
+.popular .section-header .button {
+  width: 253px;
+}
+
+.about .button {
+  width: 220px;
+}
+
+.about .contacts .button {
+  width: 100%;
+}
+
+.button-buy {
+  padding: 10px 0;
+  padding-bottom: 8px;
+  background-color: #63a63e;
+  border-bottom: 2px solid #367315;
+}
+
+.button-buy:hover,
+.button-buy:focus {
+  background-color: #5fbb2d;
+  border-bottom: 2px solid #367315;
+}
+
+.button-buy:active {
+  background-color: #518534;
+}
+
+.button-favorites {
+  padding: 8px 0;
+  border: 2px solid #63a63e;
+  color: #32425c;
+  background-color: #ffffff;
+}
+
+.button-favorites:hover,
+.button-favorites:focus {
+  border: 2px solid #32425c;
+
+  background-color: #ffffff;
+}
+
+.button-favorites:active {
+  border: 2px solid #c1c6ce;
+
+  color: #c1c6ce;
+
+  background-color: #ffffff;
+}
+
+.pagination .button {
+  border: 2px solid #e5e5e5;
+
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.pagination .button:focus,
+.pagination .button:hover {
+  border: 2px solid #bdc6ca;
+
+  background-color: #ffffff;
+}
+
+.pagination .button:active {
+  border: 2px solid #ee3643;
+
+  background-color: #ffffff;
 }
