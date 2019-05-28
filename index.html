@@ -6,6 +6,10 @@
     <meta name="keywords" content="интернет-магазин,строительные материалы, инструменты, ремонт">
     <meta name="author" content="HTML Academy">
     <title>Интернет-магазин «Техномарт»</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="site-header">
@@ -110,7 +114,7 @@
         </figure>
       </section>
 
-      <section class="popular-items">
+      <section class="popular items">
         <div class="section-header">
           <h2>Популярные товары:</h2>
           <a class="button button-red" href="catalog.html">Все популярные товары</a>
@@ -143,7 +147,7 @@
         </ul>
       </section>
 
-      <section class="popular-manufacturers">
+      <section class="popular popular-manufacturers">
         <div class="section-header">
           <h2>Популярные производители:</h2>
           <a class="button button-red" href="catalog.html">Все производители</a>
@@ -189,31 +193,31 @@
         <p>Хороший интернет-магазин отличается от плохого не только ценами!</p>
         <p>Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
         <ul class="services-list">
-          <li><button class="button service" type="button">Доставка</button></li>
+          <li><button class="button service active" type="button">Доставка</button></li>
           <li><button class="button service" type="button">Гарантия</button></li>
           <li><button class="button service" type="button">Кредит</button></li>
         </ul>
-        <div class="service-details service-delivery">
-          <p class="service-title">Доставка</p>
+        <section class="service-details service-delivery">
+          <h3>Доставка</h3>
           <p>Мы с удовольствием доставим ваш товар прямо <br>к вашему подъезду совершенно бесплатно!</p>
           <p>Ведь мы неплохо заработаем, <br>поднимая его на ваш этаж!</p>
           <img src="img/service-delivery.png" alt="Доставка" height="261" width="468">
-        </div>
-        <div class="service-details service-warranty">
-          <p class="service-title">Гарантия</p>
+        </section>
+        <section class="service-details service-warranty">
+          <h3>Гарантия</h3>
           <p>Если купленный у нас товар поломается или заискрит, <br>
             а также в случае пожара, спровоцированного его возгаранием,
             вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.</p>
           <p>Дом уж восстановите как-нибудь сами.</p>
           <img src="img/service-warranty.png" alt="Гарантия" height="283" width="389">
-        </div>
-        <div class="service-details service-credit">
-          <p class="service-title">Кредит</p>
+        </section>
+        <section class="service-details service-credit">
+          <h3>Кредит</h3>
           <p>Залезть в долговую яму стало проще!</p>
           <p>Кредитные консультанты придут вам на помощь.</p>
           <img src="img/service-credit.png" alt="Кредит" height="285" width="465">
           <button class="button-red" type="button">Отправить заявку</button>
-        </div>
+        </section>
       </section>
 
       <section class="about">

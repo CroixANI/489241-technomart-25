@@ -1,0 +1,299 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Cuprum", Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.container h2,
+.container h3 {
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+}
+
+address {
+  font-style: normal;
+}
+
+.account-navigation ul,
+.site-navigation ul,
+.categories ul,
+.items ul,
+.popular-manufacturers ul,
+.services ul,
+.about ul,
+.site-footer-bottom ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+.site-header {
+  background-color: #f3f7f8
+}
+
+/* HEADER - Top part with search input and bookmarks */
+.site-header-top {
+  font-size: 17px;
+  line-height: 18px;
+  color: #ffffff;
+
+  background-color: #293449;
+}
+
+.site-header-top a {
+  color: #ffffff;
+}
+
+.site-header-top a:hover,
+.site-header-top a:focus {
+  background-color: #212a3a;
+}
+
+.site-header-top a:active {
+  background-color: #161d29;
+}
+
+.site-header-top .cart-has-items {
+  background-color: #ee3643;
+}
+
+.site-header .button-green {
+  color: #ffffff;
+
+  background-color: #63a63e;
+}
+
+.site-header .button-green:hover,
+.site-header .button-green:focus {
+  background-color: #5fbb2d;
+}
+
+.site-header .button-green:active {
+  background-color: #518534;
+}
+
+/* HEADER - Middle part with H1, contacts and account navigation */
+.site-header h1 {
+  font-size: 16px;
+  line-height: 23px;
+  font-style: italic;
+  font-weight: 700;
+  color: #ee3643;
+}
+
+.site-header .contacts a {
+  font-size: 21px;
+  line-height: 21px;
+  color: #ee3643;
+}
+
+.site-header .contacts address {
+  font-size: 14px;
+  line-height: 24px;
+  color: #32425c;
+}
+
+.account-navigation a {
+  font-size: 21px;
+  line-height: 21px;
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.account-navigation a:hover,
+.account-navigation a:focus {
+  color: #ee3643;
+}
+
+.account-navigation .account-link {
+  font-size: 16px;
+  line-height: 18px;
+  color: #32425c;
+  text-decoration: underline;
+
+  background-color: #f2f6f8;
+}
+
+.account-navigation .account-link:hover,
+.account-navigation .account-link:focus {
+  color: #ee3643;
+}
+
+/* HEADER - Main menu */
+.site-navigation {
+  font-size: 17px;
+  line-height: 17px;
+  color: #ffffff;
+
+  background-color: #32425c;
+}
+
+.site-navigation a {
+  color: #ffffff;
+
+  background-color: #32425c;
+}
+
+.site-header .site-navigation a:hover,
+.site-header .site-navigation a:focus {
+  background-color: #212a3a;
+}
+
+.site-navigation a:active {
+  background-color: #161d29;
+}
+
+/* MAIN - Popular items */
+.popular .section-header {
+  color: #32425c;
+
+  background-color: #f9f5f0;
+}
+
+.popular .section-header a {
+  color: #ffffff;
+
+  background-color: #ee3643;
+}
+
+.items .price-old {
+  font-size: 17px;
+  line-height: 18px;
+  color: #a9a9a9;
+  text-decoration: line-through;
+}
+
+.items h3 {
+  font-size: 18px;
+  line-height: 20px;
+  text-transform: none;
+}
+
+.items .button-price {
+  font-size: 17px;
+  line-height: 18px;
+  color: #ffffff;
+
+  background-color: #ee3643;
+}
+
+.popular .section-header h2,
+.services h2,
+.about h2 {
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.items li,
+.services p,
+.about p {
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.services {
+  color: #000000;
+
+  background-color: #f4f8fa;
+}
+
+.services h3 {
+  font-size: 36px;
+  line-height: 36px;
+  color: #32425c;
+
+  background-color: #f4f8fa;
+}
+
+.services-list .service.active {
+  color: #32425c;
+
+  background-color: #ffffff
+}
+
+.services-list .service {
+  color: #ffffff;
+
+  background-color: #32425c
+}
+
+.services-list .service:not(.active):hover,
+.services-list .service:not(.active):focus {
+  background-color: #293449;
+}
+
+.site-footer {
+  font-size: 18px;
+  line-height: 24px;
+  color: #f3f7f9;
+
+  background-color: #32425c;
+}
+
+.site-footer .address a {
+  color: #f1f5f7;
+}
+
+.site-footer-bottom {
+  background-color: #293449;
+}
+
+.site-footer .categories a,
+.site-footer .site-footer-bottom a {
+  color: #ffd180;
+}
+
+.site-footer .categories a:hover,
+.site-footer .categories a:focus,
+.site-footer .site-footer-bottom a:hover,
+.site-footer .site-footer-bottom a:focus,
+.site-footer .site-navigation a:hover,
+.site-footer .site-navigation a:focus {
+  text-decoration: underline;
+}
+
+.site-footer .site-footer-bottom {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+/* CATALOG */
+
+.bread-crumbs {
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.search .section-header {
+  color: #32425c;
+
+  background-color: #f2f6f8;
+}
+
+.filter h3,
+.sorting h3 {
+  font-size: 13px;
+  line-height: 18px;
+  color: #000000;
+
+  background-color: #f7f3ec;
+}
+
+.items h3 {
+  font-size: 18px;
+  line-height: 20px;
+  text-transform: none;
+}
