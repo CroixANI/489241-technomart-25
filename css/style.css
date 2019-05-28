@@ -264,6 +264,9 @@ address {
 }
 
 /* CATALOG */
+.catalog {
+  font-family: 'PT Sans Narrow', sans-serif;
+}
 
 .bread-crumbs {
   color: #000000;
@@ -291,6 +294,25 @@ address {
   line-height: 20px;
   text-transform: none;
 }
+
+.filter h4 {
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.filter label {
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.filter .range-slider,
+.filter .range-prices input {
+  background-color: #f7f3ec;
+}
+
+/* BUTTONS */
 
 .button {
   display: inline-block;
@@ -351,7 +373,10 @@ a.button:focus {
 .button-favorites {
   padding: 8px 0;
   border: 2px solid #63a63e;
+
   color: #32425c;
+
+  outline: none;
   background-color: #ffffff;
 }
 
@@ -370,14 +395,18 @@ a.button:focus {
   background-color: #ffffff;
 }
 
+.filter .button,
 .pagination .button {
   border: 2px solid #e5e5e5;
 
   color: #000000;
 
+  outline: none;
   background-color: #ffffff;
 }
 
+.filter .button:hover,
+.filter .button:focus,
 .pagination .button:focus,
 .pagination .button:hover {
   border: 2px solid #bdc6ca;
@@ -385,6 +414,7 @@ a.button:focus {
   background-color: #ffffff;
 }
 
+.filter .button:active,
 .pagination .button:active {
   border: 2px solid #ee3643;
 
