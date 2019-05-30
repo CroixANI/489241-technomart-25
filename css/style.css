@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: "Cuprum", Roboto, sans-serif;
+  font-family: "Cuprum", Arial, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 24px;
   color: #000000;
@@ -25,6 +25,18 @@ address {
 
 ul {
   list-style: none;
+  padding: 0;
+}
+
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important;
+	width: 1px !important;
+	overflow: hidden;
 }
 
 .container {
@@ -36,6 +48,11 @@ ul {
   background-color: #f3f7f8
 }
 
+.site-header .site-logo:hover,
+.site-header .site-logo:focus {
+  opacity: 0.8;
+}
+
 /* HEADER - Top part with search input and bookmarks */
 .site-header-top {
   font-size: 17px;
@@ -45,72 +62,74 @@ ul {
   background-color: #293449;
 }
 
-.search label {
-  font-size: 0;
-}
-
-.search svg {
-  opacity: 0.3;
-  fill: #ffffff;
-}
-
-.search svg:hover,
-.search svg:focus {
-  opacity: 1;
-}
-
-.search svg:active {
-  opacity: 1;
-  fill: #ee3643;
-}
-
-.shopping svg {
-  opacity: 0.3;
-  fill: #ffffff;
-}
-
-.shopping a:hover svg,
-.shopping a:focus svg {
-  opacity: 1;
-  fill: #ffffff;
-}
-
-.shopping a:active svg {
-  opacity: 0.5;
-  fill: #ffffff;
-}
-
 .site-header-top a {
   color: #ffffff;
   opacity: 1;
 }
 
-.site-header-top a:hover,
-.site-header-top a:focus {
+.site-header-top a:hover {
   opacity: 1;
 }
 
-.site-header-top a:active {
+.site-header-top a:focus {
   opacity: 0.5;
   background-color: #161d29;
 }
 
-.site-header-top a.cart-has-items {
-  background-color: #ee3643;
+.site-header-top .search label {
+  font: inherit;
+  font-size: 0;
 }
 
-.site-header .button-green {
-  color: #ffffff;
-
-  background-color: #63a63e;
+.site-header-top .search svg {
+  fill: #ffffff;
+  opacity: 0.3;
 }
 
-.site-header .button-green:hover,
-.site-header .button-green:focus {
+.site-header-top .search:hover svg {
+  opacity: 1;
+}
+
+.site-header-top .search input:focus + svg {
+  fill: #ee3643;
+  background-color: #ffffff;
+  opacity: 1;
+}
+
+.site-header .shopping svg {
+  opacity: 0.3;
+  fill: #ffffff;
+}
+
+.site-header .shopping a:hover {
+  background-color: #212a3a;
+}
+
+.site-header .shopping a:focus {
+  background-color: #161d29;
+}
+
+.site-header .shopping a:hover svg {
+  opacity: 1;
+}
+
+.site-header .shopping a:focus svg {
+  opacity: 1;
+}
+
+.site-header .shopping a.button-red:hover {
+  background-color: #ca2c37;
+}
+
+.site-header .shopping a.button-red:focus {
+  background-color: #ba2732;
+}
+
+.site-header .shopping a.button-green:hover {
   background-color: #5fbb2d;
 }
 
- .site-header .button-green:active {
+.site-header .shopping a.button-green:focus {
   background-color: #518534;
 }
 
@@ -143,12 +162,11 @@ ul {
   background-color: #ffffff;
 }
 
-.account-navigation a:hover,
-.account-navigation a:focus {
+.account-navigation a:hover {
   color: #ee3643;
 }
 
-.account-navigation a:active {
+.account-navigation a:focus {
   color: #c5c5c5;
 }
 
@@ -156,12 +174,11 @@ ul {
   fill: #c5c5c5;
 }
 
-.account-navigation a:focus svg,
 .account-navigation a:hover svg {
   fill: #32425C;
 }
 
-.account-navigation a:active svg {
+.account-navigation a:focus svg {
   fill: #c5c5c5;
 }
 
@@ -174,9 +191,12 @@ ul {
   background-color: #f2f6f8;
 }
 
-.account-navigation .account-link:hover,
-.account-navigation .account-link:focus {
+.account-navigation .account-link:hover {
   color: #ee3643;
+}
+
+.account-navigation .account-link:focus {
+  color: #c5c5c5;
 }
 
 /* HEADER - Main menu */
@@ -194,12 +214,11 @@ ul {
   background-color: #32425c;
 }
 
-.site-header .site-navigation a:hover,
-.site-header .site-navigation a:focus {
+.site-header .site-navigation a:hover {
   background-color: #293449;
 }
 
-.site-navigation a:active {
+.site-header .site-navigation a:focus {
   opacity: 0.5;
   background-color: #1d2739;
 }
@@ -223,6 +242,15 @@ ul {
   background-color: #ee3643;
 }
 
+.popular-manufacturers li:hover {
+  box-shadow: 0 10px 25px 0 rgba(41,52,73,0.5);
+}
+
+.popular-manufacturers li:focus {
+  box-shadow: 0 4px 10px 0 rgba(41,52,73,0.5);
+  opacity: 0.3;
+}
+
 /* ITEMS - Popular items or Search Results items */
 .items h3 {
   font-size: 18px;
@@ -231,7 +259,7 @@ ul {
 }
 
 .items li {
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: 'PT Sans', Arial, Helvetica, sans-serif;
   text-align: center;
 }
 
@@ -247,7 +275,7 @@ ul {
 }
 
 .items li:hover {
-  box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 25px 0 rgba(41,52,73,0.5);
 }
 
 .items li:hover .hover-part {
@@ -259,44 +287,38 @@ ul {
 }
 
 .button-price {
+  position: relative;
   background-color: #ee3643;
 }
 
-.button-price:hover,
-.button-price:focus {
+.button-price:hover {
   background-color: #ca2c37;
 }
 
-.button-price:active {
+.button-price:focus {
   background-color: #ba2732;
-}
-
-/* .items .item-new {
-  display: block;
-
-  color: #ffffff;
-
-  background-color: #ee3643;
-} */
-
-/*
-.button-price {
-  position: relative;
-  padding-right: 20px;
 }
 
 .button-price::after {
   position: absolute;
+  top:0;
+  bottom: 0;
+  left: 100%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 19px 0 19px 19px;
+  border-color: transparent transparent transparent #ee3643;
   content: "";
-  border: 19px solid #ffffff;
-  top: 0px;
-  right: -19px;
-  border-right-width: 0;
-  border-left-color: #ee3643;
-  border-top-color: transparent;
-  border-bottom-color: transparent;
 }
-*/
+
+.button-price:hover::after {
+  border-color: transparent transparent transparent #ca2c37;
+}
+
+.button-price:focus::after {
+  border-color: transparent transparent transparent #ba2732;
+}
 
 /* SERVICES */
 .services {
@@ -311,7 +333,9 @@ ul {
 }
 
 .services p {
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: 'PT Sans', Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
 }
 
 .services h3 {
@@ -348,7 +372,7 @@ ul {
 }
 
 .about p {
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: 'PT Sans', Arial, Helvetica, sans-serif;
   font-size: 13px;
   line-height: 24px;
 }
@@ -376,12 +400,20 @@ ul {
 }
 
 .site-footer .categories a:hover,
-.site-footer .categories a:focus,
 .site-footer .site-footer-bottom a:hover,
-.site-footer .site-footer-bottom a:focus,
-.site-footer .site-navigation a:hover,
-.site-footer .site-navigation a:focus {
+.site-footer .site-navigation a:hover {
   text-decoration: underline;
+}
+
+.site-footer .site-navigation a:focus,
+.site-footer .categories a:focus {
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+.site-footer .site-footer-bottom a:focus {
+  color: #ee3643;
+  text-decoration: none;
 }
 
 .site-footer .site-footer-bottom {
@@ -391,11 +423,20 @@ ul {
 
 /* CATALOG */
 .catalog {
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: 'PT Sans', Arial, Helvetica, sans-serif;
+}
+
+.catalog h2 {
+  font-family: "Cuprum", Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  line-height: 30px;
 }
 
 .bread-crumbs {
+  font-size: 13px;
+  line-height: 18px;
   color: #000000;
+  text-transform: uppercase;
 
   background-color: #ffffff;
 }
@@ -404,6 +445,37 @@ ul {
   color: #32425c;
 
   background-color: #f2f6f8;
+}
+
+.search .flex-columns {
+  display: flex;
+}
+
+.search .flex-columns .filter {
+  flex-basis: 30%;
+}
+
+.search .flex-columns .flex-rows {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.search .flex-rows .items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.search .flex-rows .items li {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 30%;
+}
+
+.search .flex-rows .items .hover-part {
+  display: flex;
+  flex-direction: column;
 }
 
 .filter h3,
@@ -457,14 +529,17 @@ ul {
   background-color: #ee3643;
 }
 
+.button-green {
+  background-color: #63a63e;
+}
+
 .button-red:hover,
-.button-red:focus,
-a.button-red:hover,
-a.button-red:focus {
+a.button-red:hover {
   background-color: #ca2c37;
 }
 
-.button-red:active {
+.button-red:focus,
+a.button-red:focus {
   background-color: #ba2732;
 }
 
@@ -493,23 +568,21 @@ a.button-red:focus {
   opacity: 0.3;
 }
 
-.button-buy:hover,
-.button-buy:focus {
+.button-buy:hover {
   border-bottom: 3px solid #518534;
 
   background-color: #5fbb2d;
 }
 
-.button-buy:focus svg,
 .button-buy:hover svg {
   opacity: 1;
 }
 
-.button-buy:active {
+.button-buy:focus {
   background-color: #518534;
 }
 
-.button-buy:active svg {
+.button-buy:focus svg {
   opacity: 1;
 }
 
@@ -523,19 +596,22 @@ a.button-red:focus {
   background-color: #ffffff;
 }
 
-.button-favorites:hover,
-.button-favorites:focus {
+.button-favorites:hover {
   border: 2px solid #32425c;
 
   background-color: #ffffff;
 }
 
-.button-favorites:active {
+.button-favorites:focus {
   border: 2px solid #c1c6ce;
 
   color: #c1c6ce;
 
   background-color: #ffffff;
+}
+
+.button-pagination {
+  min-width: 38px;
 }
 
 .filter .button,
@@ -549,16 +625,14 @@ a.button-red:focus {
 }
 
 .filter .button:hover,
-.filter .button:focus,
-.pagination .button:focus,
 .pagination .button:hover {
   border: 1px solid #bdc6ca;
 
   background-color: #ffffff;
 }
 
-.filter .button:active,
-.pagination .button:active {
+.filter .button:focus,
+.pagination .button:focus {
   border: 1px solid #ee3643;
 
   background-color: #ffffff;
@@ -572,14 +646,13 @@ a.button-red:focus {
 
 }
 
-.pagination .button-red:hover,
-.pagination .button-red:focus {
+.pagination .button-red:hover {
   border: 1px solid #ca2c37;
 
   background-color: #ca2c37;
 }
 
-.pagination .button-red:active {
+.pagination .button-red:focus {
   border: 1px solid #ba2732;
 
   background-color: #ba2732;
@@ -628,7 +701,14 @@ a.button-red:focus {
 }
 
 .social-links a:hover,
-.social-links a:focus,
-.social-links a:active {
+.social-links a:focus {
   background-color: #ee3643;
 }
+
+
+/* Price button - overflow - elepsis with height т.к. стрелочка по высоте не тянется
+   кнопкам - переписать на min-width + paddings
+
+   font-family: 'Times New Roman', serif; - засечки
+   font-family: Arial, Helvetica, sans-serif; - без
+*/
