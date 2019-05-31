@@ -53,7 +53,7 @@ ul {
   opacity: 0.8;
 }
 
-/* HEADER - Top part with search input and bookmarks */
+/* ============ HEADER ============ */
 .site-header-top {
   font-size: 17px;
   line-height: 18px;
@@ -62,6 +62,7 @@ ul {
   background-color: #293449;
 }
 
+/* HEADER > Site Search */
 .site-header-top a {
   color: #ffffff;
   opacity: 1;
@@ -72,64 +73,65 @@ ul {
 }
 
 .site-header-top a:focus {
-  opacity: 0.5;
   background-color: #161d29;
+  opacity: 0.5;
 }
 
-.site-header-top .search label {
+.site-search label {
   font: inherit;
   font-size: 0;
 }
 
-.site-header-top .search svg {
+.site-search svg {
   fill: #ffffff;
   opacity: 0.3;
 }
 
-.site-header-top .search:hover svg {
+.site-search:hover svg {
   opacity: 1;
 }
 
-.site-header-top .search input:focus + svg {
+.search-input:focus + svg {
   fill: #ee3643;
   background-color: #ffffff;
   opacity: 1;
 }
 
-.site-header .shopping svg {
-  opacity: 0.3;
+/* HEADER > Shopping Status (Bookmarks, Cart, Order Button) */
+.shopping svg {
   fill: #ffffff;
+  opacity: 0.3;
 }
 
-.site-header .shopping a:hover {
+.shopping-link:hover {
   background-color: #212a3a;
 }
 
-.site-header .shopping a:focus {
+.shopping-link:focus {
   background-color: #161d29;
 }
 
-.site-header .shopping a:hover svg {
+.shopping-link:hover svg {
   opacity: 1;
 }
 
-.site-header .shopping a:focus svg {
+.shopping-link:focus svg {
   opacity: 1;
 }
 
-.site-header .shopping a.button-red:hover {
+.shopping-link.button-red:hover {
   background-color: #ca2c37;
 }
 
-.site-header .shopping a.button-red:focus {
+.shopping-link.button-red:focus {
   background-color: #ba2732;
 }
 
-.site-header .shopping a.button-green:hover {
+.shopping-link.button-green:hover {
   background-color: #5fbb2d;
 }
 
-.site-header .shopping a.button-green:focus {
+.shopping-link.button-green:focus {
   background-color: #518534;
 }
 
@@ -142,13 +144,13 @@ ul {
   color: #ee3643;
 }
 
-.site-header .contacts a {
+.contacts a {
   font-size: 21px;
   line-height: 21px;
   color: #ee3643;
 }
 
-.site-header .contacts address {
+.contacts address {
   font-size: 14px;
   line-height: 24px;
   color: #32425c;
@@ -174,11 +176,11 @@ ul {
   fill: #c5c5c5;
 }
 
-.account-navigation a:hover svg {
+.account-button:hover svg {
   fill: #32425C;
 }
 
-.account-navigation a:focus svg {
+.account-button:focus svg {
   fill: #c5c5c5;
 }
 
@@ -199,8 +201,8 @@ ul {
   color: #c5c5c5;
 }
 
-/* HEADER - Main menu */
-.site-navigation {
+/* HEADER > Main menu */
+.header-navigation {
   font-size: 17px;
   line-height: 17px;
   color: #ffffff;
@@ -208,27 +210,29 @@ ul {
   background-color: #32425c;
 }
 
-.site-navigation a {
+.header-navigation a {
   color: #ffffff;
 
   background-color: #32425c;
 }
 
-.site-header .site-navigation a:hover {
+.header-navigation a:hover {
   background-color: #293449;
 }
 
-.site-header .site-navigation a:focus {
-  opacity: 0.5;
+.header-navigation a:focus {
   background-color: #1d2739;
+  opacity: 0.5;
 }
 
-/* MAIN - Popular items */
+/* ============ MAIN ============ */
+
+/* Popular Items */
 .popular .section-header {
   background-color: #f9f5f0;
 }
 
-.popular .section-header h2 {
+.section-header h2 {
   font-size: 30px;
   line-height: 30px;
   color: #32425c;
@@ -236,22 +240,48 @@ ul {
   background-color: #f9f5f0;
 }
 
-.popular .section-header a {
+.section-header a {
   color: #ffffff;
 
   background-color: #ee3643;
 }
 
-.popular-manufacturers li:hover {
+.section-header .button {
+  width: 253px;
+}
+
+.popular .items {
+  display: flex;
+  flex-direction: row;
+}
+
+.popular .item {
+  flex-basis: 25%;
+}
+
+/* Popular Brands */
+.popular-brands .brands {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.popular-brands .brand:hover {
   box-shadow: 0 10px 25px 0 rgba(41,52,73,0.5);
 }
 
-.popular-manufacturers li:focus {
+.popular-brands .brand:focus {
   box-shadow: 0 4px 10px 0 rgba(41,52,73,0.5);
   opacity: 0.3;
 }
 
-/* ITEMS - Popular items or Search Results items */
+.brands .brand {
+  flex-basis: 25%;
+}
+
+/* ============ ITEMS ============ */
+
+/* Popular items or Search Results items */
 .items h3 {
   font-size: 18px;
   line-height: 20px;
@@ -320,7 +350,7 @@ ul {
   border-color: transparent transparent transparent #ba2732;
 }
 
-/* SERVICES */
+/* ============ SERVICES ============ */
 .services {
   color: #000000;
 
@@ -365,7 +395,7 @@ ul {
   background-color: #293449;
 }
 
-/* ABOUT */
+/* ============ ABOUT ============ */
 .about h2 {
   font-size: 30px;
   line-height: 30px;
@@ -377,7 +407,7 @@ ul {
   line-height: 24px;
 }
 
-/* FOOTER */
+/* ============ FOOTER ============ */
 .site-footer {
   font-size: 18px;
   line-height: 24px;
@@ -394,24 +424,31 @@ ul {
   background-color: #293449;
 }
 
-.site-footer .categories a,
-.site-footer .site-footer-bottom a {
+.site-navigation a {
+  color: #ffffff;
+  text-decoration: none;
+
+  background-color: #32425c;
+}
+
+.categories-navigation a,
+.site-footer-bottom a {
   color: #ffd180;
 }
 
-.site-footer .categories a:hover,
-.site-footer .site-footer-bottom a:hover,
-.site-footer .site-navigation a:hover {
+.categories-navigation a:hover,
+.site-footer-bottom a:hover,
+.site-navigation a:hover {
   text-decoration: underline;
 }
 
-.site-footer .site-navigation a:focus,
-.site-footer .categories a:focus {
+.site-navigation a:focus,
+.categories-navigation a:focus {
   text-decoration: none;
   opacity: 0.5;
 }
 
-.site-footer .site-footer-bottom a:focus {
+.site-footer-bottom a:focus {
   color: #ee3643;
   text-decoration: none;
 }
@@ -421,7 +458,27 @@ ul {
   line-height: 18px;
 }
 
-/* CATALOG */
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 41px;
+  height: 41px;
+  border-radius: 50%;
+
+  background-color: #212a3a;
+}
+
+.social-links a svg {
+  fill: #ffffff;
+}
+
+.social-links a:hover,
+.social-links a:focus {
+  background-color: #ee3643;
+}
+
+/* ============ CATALOG PAGE ============ */
 .catalog {
   font-family: 'PT Sans', Arial, Helvetica, sans-serif;
 }
@@ -451,29 +508,29 @@ ul {
   display: flex;
 }
 
-.search .flex-columns .filter {
+.flex-columns .filter {
   flex-basis: 30%;
 }
 
-.search .flex-columns .flex-rows {
+.flex-columns .flex-rows {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 
-.search .flex-rows .items {
+.search .items {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-.search .flex-rows .items li {
+.search .item {
   display: flex;
   flex-direction: column;
   flex-basis: 30%;
 }
 
-.search .flex-rows .items .hover-part {
+.search .hover-part {
   display: flex;
   flex-direction: column;
 }
@@ -485,12 +542,6 @@ ul {
   color: #000000;
 
   background-color: #f7f3ec;
-}
-
-.items h3 {
-  font-size: 18px;
-  line-height: 20px;
-  text-transform: none;
 }
 
 .filter h4 {
@@ -510,7 +561,7 @@ ul {
   background-color: #f7f3ec;
 }
 
-/* BUTTONS */
+/* ============ BUTTONS ============ */
 .button {
   display: inline-block;
   min-width: 135px;
@@ -543,15 +594,11 @@ a.button-red:focus {
   background-color: #ba2732;
 }
 
-.popular .section-header .button {
-  width: 253px;
-}
-
 .about .button {
   width: 220px;
 }
 
-.about .contacts .button {
+.contacts-map .button {
   width: 100%;
 }
 
@@ -658,7 +705,7 @@ a.button-red:focus {
   background-color: #ba2732;
 }
 
-/* MODAL - Add to CART */
+/* ============ MODAL ============ */
 .modal {
   background-color: #ffffff;
 }
@@ -684,31 +731,3 @@ a.button-red:focus {
 .modal-cart {
   border-top: 7px solid #ee3643;
 }
-
-.social-links a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 41px;
-  height: 41px;
-  border-radius: 50%;
-
-  background-color: #212a3a;
-}
-
-.social-links a svg {
-  fill: #ffffff;
-}
-
-.social-links a:hover,
-.social-links a:focus {
-  background-color: #ee3643;
-}
-
-
-/* Price button - overflow - elepsis with height т.к. стрелочка по высоте не тянется
-   кнопкам - переписать на min-width + paddings
-
-   font-family: 'Times New Roman', serif; - засечки
-   font-family: Arial, Helvetica, sans-serif; - без
-*/
