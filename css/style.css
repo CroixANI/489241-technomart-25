@@ -63,9 +63,18 @@ ul {
 }
 
 /* HEADER > Site Search */
+.site-header-top .container {
+  display: flex;
+}
+
 .site-header-top a {
   color: #ffffff;
   opacity: 1;
+}
+
+.site-logo img {
+  vertical-align: top;
+  margin-bottom: -5px;
 }
 
 .site-header-top a:hover {
@@ -77,27 +86,67 @@ ul {
   opacity: 0.5;
 }
 
+.site-search {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
 .site-search label {
   font: inherit;
   font-size: 0;
 }
 
-.site-search svg {
+.site-header-top .button {
+  min-width: 150px; /* TODO - Is it correct? */
+}
+
+.search-icon-container {
   fill: #ffffff;
   opacity: 0.3;
 }
 
-.site-search:hover svg {
+.search-icon-container svg {
+  padding: 10px 15px; /* TODO - Better way to center vertically */
+}
+
+.site-search:hover .search-icon-container {
   opacity: 1;
 }
 
-.search-input:focus + svg {
-  fill: #ee3643;
+.search-input:focus {
+  outline: none;
+}
+
+.search-input:focus + .search-icon-container {
   background-color: #ffffff;
   opacity: 1;
+  fill: #ee3643;
+}
+
+.site-search .search-input {
+  padding: 0;
+  border: 0;
+
+  font-size: 17px;
+  line-height: 18px;
+  color: #ffffff;
+
+  background-color: #293449;
+}
+
+.site-search .search-input:focus {
+  color: #000000;
+
+  background-color: #ffffff;
 }
 
 /* HEADER > Shopping Status (Bookmarks, Cart, Order Button) */
+.shopping {
+  display: flex;
+}
+
 .shopping svg {
   fill: #ffffff;
   opacity: 0.3;
@@ -136,7 +185,19 @@ ul {
 }
 
 /* HEADER - Middle part with H1, contacts and account navigation */
-.site-header h1 {
+.site-header-middle {
+  display: flex;
+  justify-content: space-between;
+  min-height: 158px;
+}
+
+.site-header-middle h1,
+.site-header-middle .contacts,
+.site-header-middle .account-navigation {
+  flex-basis: 33%;
+}
+
+.site-header-middle h1 {
   font-size: 16px;
   line-height: 23px;
   font-style: italic;
@@ -208,6 +269,11 @@ ul {
   color: #ffffff;
 
   background-color: #32425c;
+}
+
+.header-navigation ul {
+  padding: 0;
+  margin: 0;
 }
 
 .header-navigation a {
@@ -405,6 +471,10 @@ ul {
   font-family: 'PT Sans', Arial, Helvetica, sans-serif;
   font-size: 13px;
   line-height: 24px;
+}
+
+.map-link {
+  font-size: 0;
 }
 
 /* ============ FOOTER ============ */
