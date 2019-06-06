@@ -18,7 +18,7 @@
             <img src="img/site-icon.png" alt="ТЕХНОМАРТ" height="47" width="220">
           </a>
           <form class="site-search" action="https://echo.htmlacademy.ru" method="GET">
-            <label for="search">Поиск:</label>
+            <label for="search" aria-label="Поиск">Поиск:</label>
             <input class="search-input" id="search" name="search" type="text" placeholder="Поиск:">
             <div class="search-icon-container">
               <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -129,14 +129,28 @@
       <div class="container instruments-wrapper">
         <section class="instruments-slider">
           <h2 class="visually-hidden">Инструменты</h2>
-          <figure>
-            <figcaption>Дрели</figcaption>
-            <p>Соседям на радость</p>
-            <a class="button button-red" href="catalog.html">Дрели</a>
-            <img src="img/drills.jpg" alt="Дрели" height="266" width="620">
-            <button class="button-previous" aria-label="Предыдущая дрель"></button>
-            <button class="button-next" aria-label="Следующая дрель"></button>
-          </figure>
+          <div class="slide">
+            <figure>
+              <figcaption>
+                <p class="header">Дрели</p>
+                <p class="description">Соседям на радость</p>
+              </figcaption>
+              <img src="img/drills.jpg" alt="Дрели" height="266" width="620">
+              <a class="button button-red" href="catalog.html">Открыть каталог</a>
+            </figure>
+          </div>
+          <div class="slide hidden">
+            <figure>
+              <figcaption>
+                <p class="header">Перфораторы</p>
+                <p class="description">Настоящие мужские игрушки</p>
+              </figcaption>
+              <img src="img/perforators.jpg" alt="Перфораторы" height="266" width="620">
+              <a class="button button-red" href="catalog.html">Открыть каталог</a>
+            </figure>
+          </div>
+          <button class="button-previous" aria-label="Предыдущая категория">Предыдущая категория</button>
+          <button class="button-next" aria-label="Следующая категория">Следующая категория</button>
         </section>
         <ul class="categories-shopping">
           <li class="category-discount">
@@ -238,9 +252,9 @@
           <p>Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
           <div class="services-list">
             <ul class="services-navigation">
-              <li><button class="button service active" type="button">Доставка</button></li>
-              <li><button class="button service" type="button">Гарантия</button></li>
-              <li><button class="button service" type="button">Кредит</button></li>
+              <li><button class="button service active" type="button" data-target='service-delivery'>Доставка</button></li>
+              <li><button class="button service" type="button" data-target='service-warranty'>Гарантия</button></li>
+              <li><button class="button service" type="button" data-target='service-credit'>Кредит</button></li>
             </ul>
             <section class="service-details service-delivery">
               <div class="service-details-text">
@@ -254,8 +268,9 @@
               <div class="service-details-text">
                 <h3>Гарантия</h3>
                 <p>Если купленный у нас товар поломается или заискрит, <br>
-                  а также в случае пожара, спровоцированного его возгаранием,
-                  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.</p>
+                  а также в случае пожара, спровоцированного его возгаранием, <br>
+                  вы всегда можете быть уверены в нашей гарантии.</p>
+                <p>Мы обменяем сгоревший товар на новый.</p>
                 <p>Дом уж восстановите как-нибудь сами.</p>
               </div>
               <img src="img/service-warranty.png" alt="Гарантия" height="283" width="389">
@@ -444,4 +459,5 @@
       </a>
     </section>
   </body>
+  <script src="js/script.js"></script>
 </html>

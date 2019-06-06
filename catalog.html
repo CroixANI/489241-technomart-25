@@ -160,47 +160,54 @@
             <h3>Фильтр:</h3>
             <div class="price">
               <h4>Цена:</h4>
-              <div class="range-slider">
-                <div class="slider-line"></div>
-                <span class="slider-handle left-handle"></span>
-                <span class="slider-handle right-handle"></span>
+              <div class="range-slider-wrapper">
+                <div class="range-slider">
+                  <div class="slider-line"></div>
+                  <span class="slider-handle left-handle"></span>
+                  <span class="slider-handle right-handle"></span>
+                </div>
               </div>
               <div class="range-prices">
-                <input name="minPrice" value="0" aria-label="Минимальная цена">
+                <input name="minPrice" value="0" type="number" min="0" max="9999999999" aria-label="Минимальная цена">
                 <span>-</span>
-                <input name="maxPrice" value="30000" aria-label="Максимальная цена">
+                <input name="maxPrice" value="30000" type="number" min="0" max="9999999999" aria-label="Максимальная цена">
               </div>
             </div>
             <div class="manufacturers">
               <h4>Производители:</h4>
               <ul>
                 <li>
-                  <label>
-                    <input name="manufacturers" value="bosch" type="checkbox" checked>
+                  <input class="checkbox" id="manufacturer-bosch" name="manufacturers" value="bosch" type="checkbox" checked>
+                  <label for="manufacturer-bosch">
+                    <span></span>
                     BOSCH
                   </label>
                 </li>
                 <li>
-                  <label>
-                    <input name="manufacturers" value="interscol" type="checkbox">
+                  <input class="checkbox" id="manufacturer-interskol" name="manufacturers" value="interscol" type="checkbox">
+                  <label for="manufacturer-interskol">
+                    <span></span>
                     Интерскол
                   </label>
                 </li>
                 <li>
-                  <label>
-                    <input name="manufacturers" value="makita" type="checkbox" checked>
+                  <input class="checkbox" id="manufacturer-makita" name="manufacturers" value="makita" type="checkbox" checked>
+                  <label for="manufacturer-makita">
+                    <span></span>
                     Makita
                   </label>
                 </li>
                 <li>
-                  <label>
-                    <input name="manufacturers" value="dewalt" type="checkbox">
+                  <input class="checkbox" id="manufacturer-dewalt" name="manufacturers" value="dewalt" type="checkbox">
+                  <label for="manufacturer-dewalt">
+                    <span></span>
                     Dewalt
                   </label>
                 </li>
                 <li>
-                  <label>
-                    <input name="manufacturers" value="hitachi" type="checkbox">
+                  <input class="checkbox" id="manufacturer-hitachi" name="manufacturers" value="hitachi" type="checkbox">
+                  <label for="manufacturer-hitachi">
+                    <span></span>
                     Hitachi
                   </label>
                 </li>
@@ -228,11 +235,13 @@
           <div class="flex-rows">
             <form class="sorting" action="https://echo.htmlacademy.ru" method="GET">
               <h3>Сортировка:</h3>
-              <a href="catalog.html?sortBy=price">По цене</a>
-              <a href="catalog.html?sortBy=type">По типу</a>
-              <a href="catalog.html?sortBy=functionality">По функционалу</a>
-              <button class="sort-button up-arrow-button" type="submit" name="ascending">По возрастанию</button>
-              <button class="sort-button down-arrow-button active-button" type="submit" name="descending">По убыванию</button>
+              <div class="buttons">
+                <a href="catalog.html?sortBy=price">По цене</a>
+                <a href="catalog.html?sortBy=type">По типу</a>
+                <a href="catalog.html?sortBy=functionality">По функционалу</a>
+                <button class="sort-button up-arrow-button" type="submit" name="ascending">По возрастанию</button>
+                <button class="sort-button down-arrow-button active-button" type="submit" name="descending">По убыванию</button>
+              </div>
             </form>
             <ul class="items">
               <li class="item">
