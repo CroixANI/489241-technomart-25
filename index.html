@@ -170,7 +170,6 @@
         </ul>
       </div>
 
-
       <section class="container popular">
         <div class="section-header">
           <h2>Популярные товары:</h2>
@@ -411,32 +410,20 @@
     </footer>
 
     <section class="modal modal-contact">
-      <svg enable-background="new 0 0 21 21" height="21" viewBox="0 0 21 21" width="21"
-        xmlns="http://www.w3.org/2000/svg">
-        <path d="m13.273 10.5 7.422-7.422c.389-.389.389-1.025 0-1.414l-1.359-1.359c-.389-.389-1.025-.389-1.414
-        0l-7.422 7.422-7.422-7.422c-.389-.389-1.025-.389-1.414 0l-1.359 1.359c-.389.389-.389 1.025 0 1.414l7.422
-        7.422-7.421 7.422c-.389.389-.389 1.025 0 1.414l1.359 1.359c.389.389 1.025.389 1.414 0l7.422-7.422 7.422
-        7.422c.389.389 1.025.389 1.414 0l1.359-1.359c.389-.389.389-1.025 0-1.414z" fill="#ee3643"/>
-      </svg>
       <h2 class="visually-hidden">Напишите нам</h2>
+      <button class="close-button" type="button" aria-label="Закрыть">Закрыть</button>
       <form class="contact-form" action="https://echo.htmlacademy.ru" method="post">
         <p>
-          <label>
-            Ваше имя:
-            <input type="text" name="name" placeholder="Имя фамилия">
-          </label>
+          <label for="name">Ваше имя:</label>
+          <input id="name" type="text" name="name" placeholder="Имя Фамилия">
         </p>
         <p>
-          <label>
-            Ваше e-mail:
-            <input type="text" name="email" placeholder="email@example.com">
-          </label>
+          <label for="email">Ваше e-mail:</label>
+          <input id="email" type="text" name="email" placeholder="email@example.com">
         </p>
         <p class="login-password-info">
-          <label>
-            Текст письма:
-            <textarea name="body" cols="30" rows="10"></textarea>
-          </label>
+          <label for="body">Текст письма:</label>
+          <textarea id="body" name="body" cols="30" rows="10" placeholder="В свободной форме"></textarea>
         </p>
         <div class="modal-footer">
           <button class="button button-red" type="submit">Отправить</button>
@@ -445,17 +432,11 @@
     </section>
 
     <section class="modal modal-map">
-      <svg enable-background="new 0 0 21 21" height="21" viewBox="0 0 21 21" width="21"
-        xmlns="http://www.w3.org/2000/svg">
-        <path d="m13.273 10.5 7.422-7.422c.389-.389.389-1.025 0-1.414l-1.359-1.359c-.389-.389-1.025-.389-1.414
-        0l-7.422 7.422-7.422-7.422c-.389-.389-1.025-.389-1.414 0l-1.359 1.359c-.389.389-.389 1.025 0 1.414l7.422
-        7.422-7.421 7.422c-.389.389-.389 1.025 0 1.414l1.359 1.359c.389.389 1.025.389 1.414 0l7.422-7.422 7.422
-        7.422c.389.389 1.025.389 1.414 0l1.359-1.359c.389-.389.389-1.025 0-1.414z" fill="#ee3643"/>
-      </svg>
       <h2 class="visually-hidden">Карта</h2>
+      <button class="close-button" type="button" aria-label="Закрыть">Закрыть</button>
       <a class="map-link" href="https://yandex.by/maps/-/CCvsVPMA">
           Адрес компании ул. Большая Конюшенная 19/8
-          <img src="img/map-big.png" alt="Адрес компании ул. Большая Конюшенная 19/8" height="476" width="970">
+          <img src="img/map-big.png" alt="Адрес компании ул. Большая Конюшенная 19/8" height="446" width="940">
       </a>
     </section>
   </body>
