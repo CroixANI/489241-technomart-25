@@ -179,35 +179,35 @@
                 <li>
                   <input class="checkbox" id="manufacturer-bosch" name="manufacturers" value="bosch" type="checkbox" checked>
                   <label for="manufacturer-bosch">
-                    <span></span>
+                    <span class="checkbox-icon"></span>
                     BOSCH
                   </label>
                 </li>
                 <li>
                   <input class="checkbox" id="manufacturer-interskol" name="manufacturers" value="interscol" type="checkbox">
                   <label for="manufacturer-interskol">
-                    <span></span>
+                    <span class="checkbox-icon"></span>
                     Интерскол
                   </label>
                 </li>
                 <li>
                   <input class="checkbox" id="manufacturer-makita" name="manufacturers" value="makita" type="checkbox" checked>
                   <label for="manufacturer-makita">
-                    <span></span>
+                    <span class="checkbox-icon"></span>
                     Makita
                   </label>
                 </li>
                 <li>
                   <input class="checkbox" id="manufacturer-dewalt" name="manufacturers" value="dewalt" type="checkbox">
                   <label for="manufacturer-dewalt">
-                    <span></span>
+                    <span class="checkbox-icon"></span>
                     Dewalt
                   </label>
                 </li>
                 <li>
-                  <input class="checkbox" id="manufacturer-hitachi" name="manufacturers" value="hitachi" type="checkbox">
+                  <input class="checkbox" id="manufacturer-hitachi" name="manufacturers" value="hitachi" type="checkbox" disabled>
                   <label for="manufacturer-hitachi">
-                    <span></span>
+                    <span class="checkbox-icon"></span>
                     Hitachi
                   </label>
                 </li>
@@ -217,14 +217,16 @@
               <h4>Питание:</h4>
               <ul>
                 <li>
-                  <label>
-                    <input name="power" value="accumulator" type="radio" checked>
+                  <input class="radio" id="accumulator" name="power" value="accumulator" type="radio" checked>
+                  <label for="accumulator">
+                    <span class="radio-icon"></span>
                     Аккумуляторные
                   </label>
                 </li>
                 <li>
-                  <label>
-                    <input name="power" value="electric" type="radio">
+                  <input class="radio" id="electric" name="power" value="electric" type="radio">
+                  <label for="electric">
+                    <span class="radio-icon"></span>
                     Сетевые
                   </label>
                 </li>
