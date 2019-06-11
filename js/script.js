@@ -53,6 +53,9 @@ var contactUs = {
   },
   subscribe: function() {
     var button = document.getElementsByClassName(contactUs.selectors.contactUsButton)[0];
+    if (button === undefined) {
+      return;
+    }
     addEvent(button, 'click', contactUs.showModal);
     var modal = document.getElementsByClassName(contactUs.selectors.modalDialog)[0];
     var closeButton = modal.getElementsByClassName(contactUs.selectors.closeButton)[0];
@@ -78,6 +81,9 @@ var map = {
   },
   subscribe: function() {
     var link = document.getElementsByClassName(map.selectors.mapLink)[0];
+    if (link === undefined) {
+      return;
+    }
     addEvent(link, 'click', map.showModal);
     var modal = document.getElementsByClassName(map.selectors.modalDialog)[0];
     var closeButton = modal.getElementsByClassName(map.selectors.closeButton)[0];
@@ -96,6 +102,41 @@ var map = {
   }
 }
 
+var addToCart = {
+  selectors: {
+    modalDialog: 'modal-cart',
+    closeButton: 'close-button',
+    buyButton: 'button-buy',
+    continueShopping: 'continue-button'
+  },
+  subscribe: function() {
+    var buttons = document.getElementsByClassName(addToCart.selectors.buyButton);
+    for (var i = 0; i < buttons.length; i++) {
+      addEvent(buttons[i], 'click', addToCart.showModal);
+    }
+    var modal = document.getElementsByClassName(addToCart.selectors.modalDialog)[0];
+    var closeButton = modal.getElementsByClassName(addToCart.selectors.closeButton)[0];
+    if (closeButton === undefined) {
+      return;
+    }
+    addEvent(closeButton, 'click', addToCart.closeModal);
+    var continueButton = modal.getElementsByClassName(addToCart.selectors.continueShopping)[0];
+    addEvent(continueButton, 'click', addToCart.closeModal);
+  },
+  showModal: function(args) {
+    args.preventDefault();
+    var modal = document.getElementsByClassName(addToCart.selectors.modalDialog)[0];
+    modal.classList.remove('hidden');
+  },
+  closeModal: function() {
+    var modal = document.getElementsByClassName(addToCart.selectors.modalDialog)[0];
+    if (!modal.classList.contains('hidden')) {
+      modal.classList.add('hidden');
+    }
+  }
+}
+
 services.subscribe();
 contactUs.subscribe();
 map.subscribe();
+addToCart.subscribe();
