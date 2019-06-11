@@ -67,7 +67,7 @@
           <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
         </div>
         <nav class="account-navigation">
-          <ul>
+          <ul class="buttons">
             <li class="button-account-container">
               <a class="button button-account" href="account.html">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -289,7 +289,7 @@
                 <a class="button button-price" href="catalog.html?item=bosch_bfg_6000" aria-label="Цена 25 500">25 500 Р.</a>
               </li>
               <li class="item">
-                <span class="item-new">New</span>
+                <div class="ribbon"><div class="item-new">New</div></div>
                 <h3>Перфоратор BOSCH BFG 2000</h3>
                 <div class="item-hover">
                   <div class="image-part">
@@ -333,7 +333,7 @@
                 <a class="button button-price" href="catalog.html?item=bosch_bfg_3000" aria-label="Цена 15 500">15 500 Р.</a>
               </li>
               <li class="item">
-                <span class="item-new">New</span>
+                <div class="ribbon"><div class="item-new">New</div></div>
                 <h3>Перфоратор BOSCH BFG 6000</h3>
                 <div class="item-hover">
                   <div class="image-part">
@@ -377,7 +377,7 @@
                 <a class="button button-price" href="catalog.html?item=bosch_bfg_2000" aria-label="Цена 12 500">12 500 Р.</a>
               </li>
               <li class="item">
-                <span class="item-new">New</span>
+                <div class="ribbon"><div class="item-new">New</div></div>
                 <h3>Перфоратор BOSCH BFG 3000</h3>
                 <div class="item-hover">
                   <div class="image-part">
@@ -557,11 +557,11 @@
       </div>
     </footer>
 
-    <section class="modal modal-cart">
+    <section class="modal modal-cart hidden">
       <button class="close-button" type="button" aria-label="Закрыть">Закрыть</button>
-      <div>
-        <h2>Товар добавлен в корзину!</h2>
+      <div class="content">
         <img src="img/icons/icon-success.svg" alt="Товар добавлен" height="66" width="66">
+        <h2>Товар добавлен в корзину!</h2>
       </div>
       <div class="modal-footer">
         <a class="button button-red" href="cart.html">Оформить заказ</a>
