@@ -235,12 +235,14 @@
           <div class="flex-rows">
             <form class="sorting" action="https://echo.htmlacademy.ru" method="GET">
               <h3>Сортировка:</h3>
-              <div class="buttons">
-                <a href="catalog.html?sortBy=price">По цене</a>
+              <div class="sorting-buttons">
+                <a class="active" href="catalog.html?sortBy=price">По цене</a>
                 <a href="catalog.html?sortBy=type">По типу</a>
                 <a href="catalog.html?sortBy=functionality">По функционалу</a>
-                <button class="sort-button up-arrow-button" type="submit" name="ascending">По возрастанию</button>
-                <button class="sort-button down-arrow-button active-button" type="submit" name="descending">По убыванию</button>
+                <div class="sort-directions">
+                  <button class="sort-button up-arrow-button active" type="submit" name="ascending">По возрастанию</button>
+                  <button class="sort-button down-arrow-button active-button" type="submit" name="descending">По убыванию</button>
+                </div>
               </div>
             </form>
             <ul class="items">
