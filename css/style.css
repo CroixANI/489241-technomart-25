@@ -1793,6 +1793,7 @@ a.button-red:focus {
   justify-content: space-between;
   padding-left: 80px;
   padding-right: 80px;
+  padding-top: 25px;
 }
 
 .contact-form p {

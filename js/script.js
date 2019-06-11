@@ -45,4 +45,57 @@ var services = {
   }
 }
 
+var contactUs = {
+  selectors: {
+    modalDialog: 'modal-contact',
+    closeButton: 'close-button',
+    contactUsButton: 'contacts-us-button'
+  },
+  subscribe: function() {
+    var button = document.getElementsByClassName(contactUs.selectors.contactUsButton)[0];
+    addEvent(button, 'click', contactUs.showModal);
+    var modal = document.getElementsByClassName(contactUs.selectors.modalDialog)[0];
+    var closeButton = modal.getElementsByClassName(contactUs.selectors.closeButton)[0];
+    addEvent(closeButton, 'click', contactUs.closeModal);
+  },
+  showModal: function() {
+    var modal = document.getElementsByClassName(contactUs.selectors.modalDialog)[0];
+    modal.classList.remove('hidden');
+  },
+  closeModal: function() {
+    var modal = document.getElementsByClassName(contactUs.selectors.modalDialog)[0];
+    if (!modal.classList.contains('hidden')) {
+      modal.classList.add('hidden');
+    }
+  }
+}
+
+var map = {
+  selectors: {
+    modalDialog: 'modal-map',
+    closeButton: 'close-button',
+    mapLink: 'map-link'
+  },
+  subscribe: function() {
+    var link = document.getElementsByClassName(map.selectors.mapLink)[0];
+    addEvent(link, 'click', map.showModal);
+    var modal = document.getElementsByClassName(map.selectors.modalDialog)[0];
+    var closeButton = modal.getElementsByClassName(map.selectors.closeButton)[0];
+    addEvent(closeButton, 'click', map.closeModal);
+  },
+  showModal: function(args) {
+    args.preventDefault();
+    var modal = document.getElementsByClassName(map.selectors.modalDialog)[0];
+    modal.classList.remove('hidden');
+  },
+  closeModal: function() {
+    var modal = document.getElementsByClassName(map.selectors.modalDialog)[0];
+    if (!modal.classList.contains('hidden')) {
+      modal.classList.add('hidden');
+    }
+  }
+}
+
 services.subscribe();
+contactUs.subscribe();
+map.subscribe();
