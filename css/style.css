@@ -636,7 +636,6 @@ address {
   min-width: 195px;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color:
 }
 
 .slide .header {
@@ -799,13 +798,20 @@ address {
 
 .brands .brand {
   display: flex;
-  align-items: center;
   min-width: 220px;
   height: 145px;
   mix-blend-mode:multiply;
   margin-bottom: 20px;
 
   border: 1px solid #eaeaea;
+}
+
+.brand a {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+
+  text-align: center;
 }
 
 .brand img {
