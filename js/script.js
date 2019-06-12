@@ -115,6 +115,9 @@ var addToCart = {
       addEvent(buttons[i], 'click', addToCart.showModal);
     }
     var modal = document.getElementsByClassName(addToCart.selectors.modalDialog)[0];
+    if (modal === undefined) {
+      return;
+    }
     var closeButton = modal.getElementsByClassName(addToCart.selectors.closeButton)[0];
     if (closeButton === undefined) {
       return;

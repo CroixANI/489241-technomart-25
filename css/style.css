@@ -42,12 +42,34 @@ address {
 
 .site-header {
   background-color: #f3f7f8;
-  margin-bottom: 60px;
+  margin-bottom: 59px;
 }
 
-.site-header .site-logo:hover,
-.site-header .site-logo:focus {
-  opacity: 0.8;
+.site-logo {
+  display: flex;
+  background-color: #ee3643;
+  border-bottom: 5px solid #b52933;
+  margin-bottom: -5px;
+}
+
+.site-logo img {
+  margin: auto;
+}
+
+.site-header .site-logo {
+  height: 42px;
+  width: 220px;
+}
+
+.site-footer .site-logo {
+  height: 63px;
+  width: 220px;
+  margin-bottom: 27px;
+}
+
+.site-logo:hover,
+.site-logo:focus {
+  background-color: #ca2c37;
 }
 
 /* ============ HEADER ============ */
@@ -69,11 +91,6 @@ address {
 .site-header-top a {
   color: #ffffff;
   opacity: 1;
-}
-
-.site-logo img {
-  vertical-align: top;
-  margin-bottom: -5px;
 }
 
 .site-header-top a:hover {
@@ -98,16 +115,24 @@ address {
 }
 
 .site-header-top .button {
+  display: flex;
+  align-items: center;
   min-width: 150px; /* TODO - Is it correct? */
 }
 
+.site-header-top .button-green {
+  display: block;
+}
+
 .search-icon-container {
+  display: flex;
   fill: #ffffff;
   opacity: 0.3;
 }
 
 .search-icon-container svg {
-  padding: 12px 15px; /* TODO - Better way to center vertically */
+  padding: 0px 15px; /* TODO - Better way to center vertically */
+  margin: auto;
 }
 
 .site-search:hover .search-icon-container {
@@ -168,8 +193,7 @@ address {
 }
 
 .shopping svg {
-  padding-right: 15px;
-  vertical-align: middle;
+  margin: auto 15px;
 
   fill: #ffffff;
   opacity: 0.3;
@@ -231,7 +255,8 @@ address {
 
 .site-header-middle h1 {
   margin: 0;
-  padding-left: 50px;
+  padding-left: 52px;
+  padding-top: 4px;
 
   font-size: 16px;
   line-height: 23px;
@@ -242,6 +267,7 @@ address {
 
 .contacts .phone-wrapper {
   margin-bottom: 3px;
+  margin-right: 30px;
 
   display: flex;
   padding: 10px 0;
@@ -331,7 +357,7 @@ address {
 
 /* HEADER > Main menu */
 .header-navigation-wrapper {
-  padding-bottom: 55px;
+  padding-bottom: 59px;
 }
 
 .header-navigation {
@@ -347,7 +373,7 @@ address {
   display: flex;
   flex-wrap: wrap;
   justify-content: stretch;
-  padding: 0;
+  padding: 0 20px;
   margin: 0;
 
   list-style: none;
@@ -357,17 +383,17 @@ address {
   flex-grow: 1;
 }
 
-.header-navigation li:first-child {
+/* .header-navigation li:first-child {
   padding-left: 25px;
 }
 
 .header-navigation li:last-child {
   padding-right: 20px;
-}
+} */
 
 .header-navigation a {
   display: block;
-  margin: 20px;
+  padding: 19px 30px;
 
   color: #ffffff;
 
@@ -388,11 +414,15 @@ address {
 /* ============ MAIN ============ */
 
 /* Categories */
+.categories {
+  margin-bottom: 20px;
+}
 .categories ul,
 .categories-shopping ul {
   display: flex;
   justify-content: space-between;
   padding: 0px;
+  margin: 0;
 
   list-style: none;
 }
@@ -410,10 +440,10 @@ address {
 }
 
 .categories li {
+  position: relative;
   display: flex;
   flex-direction: row;
   flex-basis: 300px;
-  margin-bottom: 8px;
 }
 
 .categories-shopping li {
@@ -425,9 +455,9 @@ address {
 .categories-shopping .header-wrapper {
   display: flex;
   flex-direction: column;
-  flex-basis: 180px;  /* TODO - works better without this */
+  flex-basis: 190px;  /* TODO - works better without this */
   align-items: flex-start;
-  margin-left: 25px;
+  margin-left: 22px;
   margin-top: 22px;
   margin-bottom: 21px;
 }
@@ -454,9 +484,14 @@ address {
   text-transform: capitalize;
 }
 
-/* TODO: Ask question - is it correct? - DONE */
 .categories .button,
 .categories-shopping .button {
+  border-radius: 4px;
+
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+
   background-color: rgba(0,0,0,0.1);
 }
 
@@ -476,21 +511,42 @@ address {
   background-color: #ffbf47;
 }
 
+.category-materials img {
+  margin-right: 45px;
+}
+
 .categories .category-tools {
   background-color: #3bbce3;
+}
+
+.category-tools img {
+  margin-right: 30px;
 }
 
 .categories .category-equipment {
   background-color: #dc91d8;
 }
 
+.category-equipment img {
+  margin-right: 32px;
+}
+
 .categories-shopping .category-discount {
   background-color: #8ed78f;
+}
+
+.category-discount img {
+  margin-right: 45px;
 }
 
 .categories-shopping .category-delivery {
   background-color: #ffc047;
 }
+
+.category-delivery img {
+  margin-right: 32px;
+}
+
 /*
 .category-materials .button-yellow {
   background-color: #e5ac40;
@@ -556,8 +612,12 @@ address {
 
 .slide figcaption {
   position: absolute;
-  top: 27px;
+  top: 23px;
   left: 25px;
+}
+
+.slide .header {
+  text-transform: uppercase;
 }
 
 .slide img {
@@ -605,7 +665,7 @@ address {
 .instruments-slider .button-next {
   position: absolute;
   top: 114px;
-  right: 25px;
+  right: 21px;
 }
 
 /* Popular Items */
@@ -619,7 +679,7 @@ address {
 }
 
 .section-header h2 {
-  margin-left: 28px;
+  margin-left: 26px;
 
   font-size: 30px;
   line-height: 30px;
@@ -650,7 +710,7 @@ address {
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: 0;
+  margin: 0;
 }
 
 .popular .item,
@@ -660,7 +720,7 @@ address {
   flex-direction: column;
   flex-basis: 25%;
   align-items: center;
-  flex-basis: 220px;
+  flex-basis: 216px;
   margin-bottom: 20px;
 
   border: 1px solid #eaeaea;
@@ -677,7 +737,7 @@ address {
 }
 
 /* https://css-tricks.com/snippets/css/corner-ribbon/ */
-.item .ribbon {
+.ribbon {
   width: 85px;
   height: 88px;
   overflow: hidden;
@@ -689,9 +749,9 @@ address {
 .ribbon .item-new {
   position: relative;
 
-  padding: 7px 0;
+  padding: 1px 0;
   left: 5px;
-  top: 2px;
+  top: 6px;
   width: 120px;
 
   text-align: center;
@@ -706,19 +766,24 @@ address {
 .item .button-price {
   margin-top: auto;
   margin-bottom: 20px;
-  margin-left: 10px;
-  margin-right: 10px;
-  min-width: 122px;
+  margin-right: 13px;
+  min-width: 105px;
+  padding-left: 17px;
+
+  font-weight: bold;
 }
 
 /* Popular Brands */
+.popular-brands {
+  margin-bottom: 63px;
+}
+
 .popular-brands .brands {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 0;
-  margin-bottom: 85px;
 
   list-style: none;
 }
@@ -760,7 +825,10 @@ address {
 
 .items h3 {
   margin: 0;
-  margin-bottom: 8px;
+  margin-bottom: 11px;
+  padding-left: 25px;
+  padding-right: 25px;
+
   font-size: 18px;
   line-height: 20px;
   text-transform: none;
@@ -829,7 +897,7 @@ address {
 
 /* ============ SERVICES ============ */
 .services {
-  margin-bottom: 80px;
+  margin-bottom: 43px;
   min-height: 558px;
 
   color: #000000;
@@ -842,8 +910,9 @@ address {
 }
 
 .services h2 {
-  padding-top: 68px;
-  padding-bottom: 6px;
+  padding-top: 66px;
+  margin-top: 0;
+  margin-bottom: 25px;
 
   font-size: 30px;
   line-height: 30px;
@@ -859,7 +928,7 @@ address {
 
 .services h3 {
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 22px;
 
   font-size: 36px;
   line-height: 36px;
@@ -897,6 +966,11 @@ address {
   list-style: none;
 }
 
+.services-navigation .button {
+  font-size: 21px;
+  line-height: 30px;
+}
+
 .services-navigation .service.active {
   color: #32425c;
 
@@ -906,7 +980,7 @@ address {
 .services-navigation .service {
   width: 240px;
   min-height: 60px;
-  padding-left: 20px;
+  padding-left: 21px;
 
   text-align: left;
   color: #ffffff;
@@ -937,15 +1011,15 @@ address {
 
 .about h2 {
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 26px;
 
   font-size: 30px;
   line-height: 30px;
 }
 
 .about p {
-  margin-top: 30px;
-  margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 23px;
 
   font-family: 'PT Sans', Arial, Helvetica, sans-serif;
   font-size: 13px;
@@ -953,8 +1027,7 @@ address {
 }
 
 .transport-companies {
-  margin-top: 25px;
-  margin-bottom: 38px;
+  margin-bottom: 36px;
   padding-left: 0;
 
   font-size: 18px;
@@ -979,8 +1052,8 @@ address {
 
 .map-link {
   display: block;
-  margin-top: 35px;
-  margin-bottom: 40px;
+  margin-top: 31px;
+  margin-bottom: 28px;
 
   font-size: 0;
 }
@@ -997,7 +1070,7 @@ address {
 .site-footer-top {
   display: flex;
   justify-content: space-between;
-  min-height: 190px;
+  margin-bottom: 38px;
 }
 
 .site-footer-top .site-footer-left {
@@ -1009,22 +1082,17 @@ address {
   flex-direction: column;
   align-items: flex-end;
   flex-basis: 550px;
-  padding-top: 40px;
+  padding-top: 37px;
 }
 
 .site-footer-right ul {
   display: flex;
   margin-top: 0;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
 .site-footer-right li {
   margin-left: 60px;
-}
-
-.site-footer .site-logo {
-  display: block;
-  margin-bottom: 30px;
 }
 
 .site-footer .address a {
@@ -1105,6 +1173,8 @@ address {
 }
 
 .site-footer .site-footer-bottom {
+  padding-top: 5px;
+
   font-size: 16px;
   line-height: 18px;
 }
