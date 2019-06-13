@@ -121,7 +121,7 @@ address {
 
   font-size: 17px;
   line-height: 18px;
-  text-transform: unset;
+  text-transform: none;
 }
 
 .site-header-top .button-green {
@@ -379,7 +379,7 @@ address {
   display: flex;
   flex-wrap: wrap;
   justify-content: stretch;
-  padding: 0 20px;
+  padding: 0 15px;
   margin: 0;
 
   list-style: none;
