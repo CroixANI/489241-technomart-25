@@ -139,7 +139,68 @@ var addToCart = {
   }
 }
 
+var slider = {
+  selectors: {
+    slide: 'slide',
+    previousButton: 'button-previous',
+    nextButton: 'button-next',
+    radioButton: 'radio-button'
+  },
+  totalSlides: 0,
+  currentIndex: 0,
+  subscribe: function() {
+    var buttons = document.getElementsByClassName(slider.selectors.radioButton);
+    for (var i = 0; i < buttons.length; i++) {
+      addEvent(buttons[i], 'click', slider.handleRadioButtonClick);
+
+      var attr = buttons[i].getAttribute('checked');
+      if (attr != undefined && attr != null) {
+        slider.currentIndex = parseInt(buttons[i].getAttribute('data-index'));
+      }
+    }
+
+    slider.totalSlides = buttons.length;
+
+    var nextButton = document.getElementsByClassName(slider.selectors.nextButton)[0];
+    addEvent(nextButton, 'click', slider.handleNextButtonClick);
+
+    var previousButton = document.getElementsByClassName(slider.selectors.previousButton)[0];
+    addEvent(previousButton, 'click', slider.handlePreviousButtonClick);
+  },
+  handleRadioButtonClick: function(args) {
+    var slideIndex = parseInt(args.target.getAttribute('data-index'));
+    slider.changeSlideByIndex(slideIndex);
+  },
+  handlePreviousButtonClick: function() {
+    var newIndex = slider.currentIndex - 1;
+    if (newIndex < 0) {
+      newIndex = slider.totalSlides - 1;
+    }
+    var buttons = document.getElementsByClassName(slider.selectors.radioButton);
+    buttons[newIndex].click();
+    slider.changeSlideByIndex(newIndex);
+  },
+  handleNextButtonClick: function() {
+    var newIndex = slider.currentIndex + 1;
+    if (newIndex >= slider.totalSlides) {
+      newIndex = 0;
+    }
+    var buttons = document.getElementsByClassName(slider.selectors.radioButton);
+    buttons[newIndex].click();
+    slider.changeSlideByIndex(newIndex);
+  },
+  changeSlideByIndex: function(index) {
+    var slides = document.getElementsByClassName(slider.selectors.slide);
+    if (!slides[slider.currentIndex].classList.contains('hidden')) {
+      slides[slider.currentIndex].classList.add('hidden');
+    }
+    slides[index].classList.remove('hidden');
+    slider.currentIndex = index;
+  }
+}
+
 services.subscribe();
 contactUs.subscribe();
 map.subscribe();
 addToCart.subscribe();
+slider.subscribe();
