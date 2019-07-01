@@ -288,6 +288,7 @@ address {
 }
 
 .account-navigation .buttons {
+  padding-left: 0;
   background-color: #ffffff;
 }
 
@@ -317,6 +318,17 @@ address {
 
 .account-navigation .button-register {
   min-width: 150px;
+}
+
+.account-navigation .button-account {
+  position: relative;
+  padding-left: 47px;
+}
+
+.button-account svg {
+  position: absolute;
+  top: 14px;
+  left: 14px;
 }
 
 .account-navigation .button:hover {
@@ -607,6 +619,11 @@ address {
 
 .instruments-slider .button-next {
   background-image: url("../img/icons/icon-right.svg");
+}
+
+.instruments-slider .radio-buttons {
+  position: absolute;
+  bottom: 0;
 }
 
 .slide figure {
@@ -979,10 +996,25 @@ address {
 }
 
 .services-navigation {
+  position: relative;
   padding: 0;
   margin: 0;
 
   list-style: none;
+}
+
+.services-navigation:after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 272px;
+  top: -40px;
+  right: 0;
+
+  background-image: url("../img/shadow.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: transparent;
 }
 
 .services-navigation .button {
@@ -1241,9 +1273,16 @@ address {
 }
 
 .account-navigation .button-logout {
+  position: relative;
   min-width: 41px;
   font-size: 0; /* TODO - Ask Question - Accessability? - NO - Use span as wrapper - visually-hidden */
   line-height: 0;
+}
+
+.button-logout svg {
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
 .catalog {
