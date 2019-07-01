@@ -153,8 +153,16 @@
           <button class="button-previous" aria-label="Предыдущая категория">Предыдущая категория</button>
           <button class="button-next" aria-label="Следующая категория">Следующая категория</button>
           <div class="radio-buttons">
-            <input type="radio" name="selected-slide" data-index="0" value="Первый слайд">
-            <input type="radio" name="selected-slide" data-index="1" value="Второй слайд" checked>
+            <input class="radio-button" id="first" type="radio" name="selected-slide" data-index="0" value="Первый слайд">
+            <label for="first">
+              <span class="radio-icon"></span>
+              Первый слайд
+            </label>
+            <input class="radio-button" id="second" type="radio" name="selected-slide" data-index="1" value="Второй слайд" checked>
+            <label for="second">
+              <span class="radio-icon"></span>
+              Второй слайд
+            </label>
           </div>
         </section>
         <ul class="categories-shopping">
