@@ -162,6 +162,9 @@ var slider = {
     slider.totalSlides = buttons.length;
 
     var nextButton = document.getElementsByClassName(slider.selectors.nextButton)[0];
+    if (nextButton === undefined) {
+      return;
+    }
     addEvent(nextButton, 'click', slider.handleNextButtonClick);
 
     var previousButton = document.getElementsByClassName(slider.selectors.previousButton)[0];
